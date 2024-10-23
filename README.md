@@ -10,4 +10,4 @@ Make sure to have install the ControlledStim dataset:
 This repository was developed purely for replication purpose and is not meant to be extended.
 
 The ANN package subclass Huggingface implementation of Wav2vec2, correcting for a few issues.
-The probe package provide the los
+The probe package provide the loss.
