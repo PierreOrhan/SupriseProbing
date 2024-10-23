@@ -15,6 +15,7 @@ ds = ds.with_format("torch")
 #---> Transforms to a TorchIterableDataset which has the attribute len and can be used
 # in a DataLoader (i.e combined with a collator!!)
 
+## Models can be downloaded here: https://huggingface.co/NDEM
 dir_model = "/yourdirtothemodel/outputs_mergefilter_short_2/checkpoint-100000"
 model = Wav2vec2_forLoss_ConstrainedMask.from_pretrained(dir_model)
 model.save_pretrained("../.." / pathlib.Path(data_dir))
