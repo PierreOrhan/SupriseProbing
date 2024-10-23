@@ -7,14 +7,18 @@ Make sure to have install the ControlledStim dataset:
         cd yourpath/ControlledStim
         pip install -e ./
 
-This repository was developed purely for replication purpose and is not meant to be extended.
+This repository was developed purely for replication purposes and is not meant to be extended.
 
 The ANN package subclass Huggingface implementation of Wav2vec2, correcting for a few issues.
-The probe package provide the loss.
+The probe package provides the loss.
 
 System requirements:
-        Same hardware requirements as the transformers python package.
-        The software was tested in torch 2.0.1.
+        Same hardware requirements as the Transformers python package.
+        
+        The software was tested in torch 2.0.1. 
+        Make sure to have torch < 2.0.1 as the loading of the transformers Wav2vec2 models might otherwise fail.
+
+        
 Installation:
         After having cloned the repository you should be able to launch the scripts.
         Installation is the time to install required dependencies.
