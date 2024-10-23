@@ -11,3 +11,10 @@ This repository was developed purely for replication purpose and is not meant to
 
 The ANN package subclass Huggingface implementation of Wav2vec2, correcting for a few issues.
 The probe package provide the loss.
+
+System requirements:
+        Same hardware requirements as the transformers python package.
+        The software was tested in torch 2.0.1.
+Installation:
+        After having cloned the repository you should be able to launch the scripts.
+        Installation is the time to install required dependencies.
