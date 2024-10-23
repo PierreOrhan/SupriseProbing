@@ -9,23 +9,21 @@ import matplotlib.pyplot as plt
 ## To use this script one need to have generated a dataset from ControlledStim.
 
 
-data_dir = "/media/pierre/NeuroData2/datasets/lot_testGeneration/test_randregrand"
+data_dir = "/yourdirtothedata/lot_testGeneration/test_randregrand"
 ds = load_ANNdataset_withMask(pathlib.Path(data_dir))
 ds = ds.with_format("torch")
 #---> Transforms to a TorchIterableDataset which has the attribute len and can be used
 # in a DataLoader (i.e combined with a collator!!)
 
-dir_model = "/media/pierre/NeuroData2/models/wav2vec2/outputs_mergefilter_short_2/onlylast/checkpoint-100000"
+dir_model = "/yourdirtothemodel/outputs_mergefilter_short_2/checkpoint-100000"
 model = Wav2vec2_forLoss_ConstrainedMask.from_pretrained(dir_model)
 model.save_pretrained("../.." / pathlib.Path(data_dir))
 
 path_config =  Path("/home/pierre/Documents/NEM/ANN/models/wav2vec2/config")
 path_preprocessor = path_config / "preprocessor_config.json"
 
-# TODO:
-# Decide of a way to iterate through the dataset
+
 batch_size = 4
-# dataset_size = 120
 data_collator = Wav2vec2_forLoss_ConstrainedMask.get_collator(file_configPreprocessor= path_preprocessor)
 dataLoader = DataLoader(
     ds,
