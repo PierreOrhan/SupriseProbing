@@ -20,7 +20,6 @@ ds = ds.with_format("torch")
 ## Models can be downloaded here: https://huggingface.co/NDEM
 dir_model = "/yourdirtothemodel/outputs_mergefilter_short_2/checkpoint-100000"
 model = Wav2vec2_forLoss_ConstrainedMask.from_pretrained(dir_model)
-model.save_pretrained("../.." / pathlib.Path(data_dir))
 
 path_config =  Path("/home/pierre/Documents/NEM/ANN/models/wav2vec2/config")
 path_preprocessor = path_config / "preprocessor_config.json"
