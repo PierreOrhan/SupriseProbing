@@ -13,7 +13,7 @@ The ANN package subclass Huggingface implementation of Wav2vec2, correcting for 
 The probe package provides the loss.
 
 **System requirements:**
-        Same hardware requirements as the Transformers python package.
+        Same hardware and software requirements as the Transformers python package.
         
 The software was tested in torch 2.0.1. Make sure to have torch < 2.0.1 as the loading of the transformers Wav2vec2 models might otherwise fail.
 
