@@ -15,8 +15,9 @@ The probe package provides the loss.
 System requirements:
         Same hardware requirements as the Transformers python package.
         
-        The software was tested in torch 2.0.1. 
-        Make sure to have torch < 2.0.1 as the loading of the transformers Wav2vec2 models might otherwise fail.
+The software was tested in torch 2.0.1. 
+
+Make sure to have torch < 2.0.1 as the loading of the transformers Wav2vec2 models might otherwise fail.
 
         
 Installation:
