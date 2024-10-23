@@ -20,5 +20,7 @@ System requirements:
 
         
 Installation:
-        After having cloned the repository you should be able to launch the scripts.
-        Installation is the time to install required dependencies.
+
+
+        cd yourpath/StructureProbing
+        pip install -e ./
