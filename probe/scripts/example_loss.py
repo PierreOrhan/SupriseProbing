@@ -1,3 +1,5 @@
+## This script allows you to plot the model surprise for one protocol
+
 from  ANN.models import  Wav2vec2_forLoss_ConstrainedMask
 import tqdm
 from torch.utils.data import DataLoader
